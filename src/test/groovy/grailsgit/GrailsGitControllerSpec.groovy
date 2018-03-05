@@ -10,5 +10,4 @@ class GrailsGitControllerSpec extends Specification implements ControllerUnitTes
 
     def cleanup() {
     }
-    
 }
