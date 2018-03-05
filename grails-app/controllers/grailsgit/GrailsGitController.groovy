@@ -9,7 +9,7 @@ class GrailsGitController {
     def listarSitios()
     {
         def lista
-        [lista = siteService.List()]
+        [lista: siteService.list()]
     }
   
     def index() { }
@@ -22,19 +22,28 @@ class GrailsGitController {
         String username = params.username
         String password = params.password
 
-        if(!username){
+        if (!username) {
 
             return
         }
         def user = User.findByUser(username)
-        if(user.password == password){
+        if (user.password == password) {
             redirect(action: "listarSitios")
         }
-      
-    def categoryVisities(Long id) {
-        Category category =  categoryService.get(id)
-        category.visits ++
-        categoryService.save(category)
+    }
+
+    def categories(Site site){
+        List<Category> categoryList = Category.findAllBySite(site)
+
+        respond categoryList
+    }
+
+    def categoryVisities(Category category) {
+        if(category){
+            category.visits ++
+            categoryService.save(category)
+            redirect(controller:"category", action: "show", id:category.id)
+        }
         return category
     }
 }
