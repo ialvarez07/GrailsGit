@@ -1,13 +1,16 @@
 package grailsgit
 
 class GrailsGitController {
+
     CategoryService categoryService
-
-
     static defaultAction = "login"
 
     def index() { }
 
+    def change() {
+      [mensaje: "VA CAMBIA!"]
+    }
+  
     def login() {
         String username = params.username
         String password = params.password
@@ -26,6 +29,5 @@ class GrailsGitController {
         category.visits ++
         categoryService.save(category)
         return category
-
     }
 }
