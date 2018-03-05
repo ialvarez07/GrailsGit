@@ -2,42 +2,30 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <title>Practicando Git</title>
 </head>
 <body>
     <content tag="nav">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Google<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-                <li><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-                <li><a href="#">App version:
-                    <g:meta name="info.app.version"/></a>
+                <li><a href="http://www.google.com/gmail">Gmail</a></li>
+                <li><a href="https://drive.google.com/drive/my-drive">Drive</a></li>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Grails version:
-                    <g:meta name="info.app.grailsVersion"/></a>
-                </li>
-                <li><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-                <li><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
             </ul>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Git<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-                <li><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-                <li><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-                <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
+                <li><a href="https://github.com/laufernandez">Perfil</a></li>
+                <li><a href="https://github.com/ialvarez07/GrailsGit">Repo de la App</a></li>
             </ul>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MercadoLibre<span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                    <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
+                    <li><a href="http://mercadolibre.turecibo.com">TuRecibo</a></li>
                 </g:each>
             </ul>
         </li>
@@ -45,19 +33,23 @@
 
     <div class="svg" role="presentation">
         <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
+            <asset:image src="grails-cupsonly-logo-white1.svg" class="grails-logo"/>
         </div>
     </div>
 
     <div id="content" role="main">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <h1>NACHO GATO</h1>
 
             <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
+                Los tres integrantes trabajarán sobre el GrailsGitController.
+                Uno creará un método que permitirá sumar 1 a la
+                categoría cada vez que un usuario la visite. El segundo
+                integrante creará un método que liste, al iniciar la
+                aplicación, los sitios activos en verde y los inactivos en
+                rojo. El tercero creará un método que permita hacer el
+                login de un usuario antes de mostrar la lista de sitios.
+                Resolver los conflictos y hacer un merge.
             </p>
 
             <div id="controllers" role="navigation">

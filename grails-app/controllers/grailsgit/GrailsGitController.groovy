@@ -1,6 +1,8 @@
 package grailsgit
 
 class GrailsGitController {
+    CategoryService categoryService
+
 
     static defaultAction = "login"
 
@@ -18,6 +20,12 @@ class GrailsGitController {
         if(user.password == password){
             redirect(action: "index")
         }
+      
+    def categoryVisities(Long id) {
+        Category category =  categoryService.get(id)
+        category.visits ++
+        categoryService.save(category)
+        return category
 
     }
 }
