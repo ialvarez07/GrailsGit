@@ -2,9 +2,16 @@ package grailsgit
 
 class GrailsGitController {
 
+    SiteService siteService  
     CategoryService categoryService
     static defaultAction = "login"
 
+    def listarSitios()
+    {
+        def lista
+        [lista = siteService.List()]
+    }
+  
     def index() { }
 
     def change() {
@@ -21,7 +28,7 @@ class GrailsGitController {
         }
         def user = User.findByUser(username)
         if(user.password == password){
-            redirect(action: "index")
+            redirect(action: "listarSitios")
         }
       
     def categoryVisities(Long id) {
