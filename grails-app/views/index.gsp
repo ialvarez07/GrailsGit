@@ -29,6 +29,14 @@
                 </g:each>
             </ul>
         </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi Perfil<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
+                    <li><a href="/grailsGit/change">Cambiar Contraseña</a></li>
+                </g:each>
+            </ul>
+        </li>
     </content>
 
     <div class="svg" role="presentation">
